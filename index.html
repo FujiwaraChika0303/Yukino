@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yukinoshita Asset Management Page</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function changeLanguage(language) {
+            var languages = ['en', 'zh', 'es', 'fr', 'de', 'ja', 'ru'];
+            for (var i = 0; i < languages.length; i++) {
+                var elements = document.getElementsByClassName(languages[i]);
+                for (var j = 0; j < elements.length; j++) {
+                    elements[j].style.display = language === languages[i] ? 'block' : 'none';
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="changeLanguage('en')">
+    <select onchange="changeLanguage(this.value)">
+        <option value="en">English</option>
+        <option value="zh">中文</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="ja">日本語</option>
+        <option value="ru">Русский</option>
+    </select>
+
+    <div class="en">
+        <h1>Welcome to Yukinoshita Asset Management Page</h1>
+        <p>You are not supposed to be here.</p>
+        <p>You should scan the QR code on the asset tag instead.</p>
+    </div>
+    <div class="zh hidden">
+        <h1>欢迎来到Yukinoshita固定资产管理页面</h1>
+        <p>您在这个页面是不正确的。</p>
+        <p>您应当扫描资产标签上的二维码。</p>
+    </div>
+    <div class="es hidden">
+        <h1>Bienvenido a la página de gestión de activos fijos de Yukinoshita</h1>
+        <p>No deberías estar aquí.</p>
+        <p>Deberías escanear el código QR en la etiqueta del activo.</p>
+    </div>
+    <div class="fr hidden">
+        <h1>Bienvenue sur la page de gestion des actifs fixes de Yukinoshita</h1>
+        <p>Vous n'êtes pas censé être ici.</p>
+        <p>Vous devriez scanner le code QR sur l'étiquette de l'actif.</p>
+    </div>
+    <div class="de hidden">
+        <h1>Willkommen auf der Yukinoshita Anlagenverwaltungsseite</h1>
+        <p>Sie sollten nicht hier sein.</p>
+        <p>Sie sollten den QR-Code auf dem Anlageetikett scannen.</p>
+    </div>
+    <!-- 日语和俄语部分需要专业翻译 -->
+    <div class="ja hidden">
+        <h1>ここはYukinoshita固定資産管理ページです</h1>
+        <p>このページにはいるべきではありません。</p>
+        <p>代わりに資産タグのQRコードをスキャンすべきです。</p>
+    </div>
+    <div class="ru hidden">
+        <h1>Добро пожаловать на страницу управления основными средствами Yukinoshita</h1>
+        <p>Вам не следует здесь находиться.</p>
+        <p>Вам следует отсканировать QR-код на теге актива.</p>
+    </div>
+</body>
+</html>
